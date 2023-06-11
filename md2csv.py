@@ -16,10 +16,7 @@ def markdown_to_csv(csv_filename):
     with open(csv_filename, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter='|')
         writer.writerows(questions_answers)
-<<<<<<< HEAD
         print("CSV file created successfully!")
-=======
->>>>>>> cbd5609add6c82f369de19d139eca6d807d47dc4
 
 if __name__ == "__main__":
     csv_filename = "output/import-to-anki.csv" #input("Please enter the path of the CSV file to be created: ")
