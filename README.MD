@@ -1,1 +1,46 @@
-Script to convert a unordered markdown list into a csv file.
+# Markdown list to CSV Converter
+
+Small script to convert an unordered markdown list copyed to the clipboard into a csv file. The seperator will be a pipe (|).
+The first column will be the question and the second column will be the answer.
+The output file "import-to-anki.csv" will be overwritten every time the script is run.
+
+## Use Case
+
+While studing I write dwon questions and answers to the toppics I'm studying in obsidian. I use the script to convert the list to a csv file that I can import into anki.
+
+## Setup
+
+Run the following command to install pyperclip:
+
+If pip is in your path: 
+
+```bash
+pip install -r requirements.txt
+``` 
+
+If pip is not in your path:
+
+```bash
+python3 -m pip install -r requirements.txt
+``` 
+
+## Usage
+
+The list should be ordered like this:
+
+```markdown
+- Question 1
+    - Answer 1
+- Question 2
+    - Answer 2
+```
+To use the script, copy the list to the clipboard and run the script:
+
+
+```bash
+chmod +x ["path to script"]/md2csv.py
+./md2csv.py
+
+```
+
+The output will be in the projects output folder named import-to-anki.csv. From there you can import it into anki.
