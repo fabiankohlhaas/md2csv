@@ -23,5 +23,5 @@ def markdown_to_csv(csv_filename):
         print("CSV file created successfully!")
 
 if __name__ == "__main__":
-    csv_filename = "output/import-to-anki.csv" #input("Please enter the path of the CSV file to be created: ")
+    csv_filename = "/Users/fabian/SynologyDrive/programming/projects/md2csv/output/import-to-anki.csv" #input("Please enter the path of the CSV file to be created: ")
     markdown_to_csv(csv_filename)

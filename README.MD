@@ -2,7 +2,7 @@
 
 Small script to convert an unordered markdown list copyed to the clipboard into a csv file. The seperator will be a pipe (|).
 The first column will be the question and the second column will be the answer.
-The output file "import-to-anki.csv" will be overwritten every time the script is run.
+The output file will be overwritten every time the script is run.
 
 ---
 
@@ -42,6 +42,12 @@ To add the script to your path, run the following command:
 sudo ln -s ["path to script"]/md2csv.py /usr/local/bin/md2csv
 ```
 
+Change the following line to the desired full path of your desired output file or delete the path and outcomment the input line to be asked for the path every time you run the script:
+
+```python
+csv_filename = "output/import-to-anki.csv" #input("Please enter the path of the CSV file to be created: ")
+```
+
 Now you can run the script from anywhere with the command:
 
 ```bash
@@ -64,4 +70,4 @@ To use the script, copy the list to the clipboard and run the script from your t
 md2csv
 ```
 
-The output will be in a folder called "output" witht the filename "import-to-anki.csv" in the same directory as the script. Import that file into anki.
+If you did not change the path for the output file, The output will be in a folder called "output" witht the filename "import-to-anki.csv" in the same directory as the script. Import that file into anki.
