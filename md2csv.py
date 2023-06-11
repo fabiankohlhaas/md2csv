@@ -10,7 +10,11 @@ def markdown_to_csv(csv_filename):
 
     for i in range(0, len(clipboard_data), 2):
         question = re.sub('-\s', '', clipboard_data[i]).strip()
-        answer = re.sub('-\s', '', clipboard_data[i+1]).strip()
+        # Check if i+1 is a valid index before trying to access it
+        if i+1 < len(clipboard_data):
+            answer = re.sub('-\s', '', clipboard_data[i+1]).strip()
+        else:
+            answer = ''  # or whatever default value you want to use for missing answers
         questions_answers.append([question, answer])
 
     with open(csv_filename, 'w', newline='') as csvfile:
