@@ -14,7 +14,7 @@ def markdown_to_csv(csv_filename):
         if i+1 < len(clipboard_data):
             answer = re.sub('-\s', '', clipboard_data[i+1]).strip()
         else:
-            answer = ''  # or whatever default value you want to use for missing answers
+            answer = 'No answer provided, check the source material'
         questions_answers.append([question, answer])
 
     with open(csv_filename, 'w', newline='') as csvfile:
